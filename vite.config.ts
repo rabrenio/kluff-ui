@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import dts from 'vite-plugin-dts'
+import { peerDependencies } from './package.json'
 
 export default defineConfig({
   plugins: [
@@ -11,6 +12,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    sourcemap: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: '@kluff/ui',
@@ -18,19 +20,7 @@ export default defineConfig({
       fileName: format => `index.${format}.js`,
     },
     rollupOptions: {
-      external: [
-        'react',
-        'react-dom',
-        'react-router-dom',
-        '@emotion/react',
-        '@emotion/styled',
-        '@fontsource/roboto',
-        '@mui/base',
-        '@mui/icons-material',
-        '@mui/lab',
-        '@mui/material',
-        '@mui/x-data-grid',
-      ],
+      external: Object.keys(peerDependencies),
       output: {
         globals: {
           react: 'React',
