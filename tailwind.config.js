@@ -5,7 +5,7 @@ import lineClamp from '@tailwindcss/line-clamp'
 /** @type {import('tailwindcss').Config} */
 export default {
   mode: 'jit',
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx,css}'],
   important: true,
   // copied from fuse
   // TODO: move this config to its own repo to make sharing easy
@@ -809,19 +809,6 @@ export default {
       '8xl': '6.4rem',
       '9xl': '9.6rem',
       '10xl': '12.8rem',
-      // xs: ['1.2rem', { lineHeight: '1.6rem' }],
-      // sm: ['1.4rem', { lineHeight: '2rem' }],
-      // base: ['1.6rem', { lineHeight: '2.4rem' }],
-      // lg: ['1.8rem', { lineHeight: '2.8em' }],
-      // xl: ['2rem', { lineHeight: '2.8rem' }],
-      // '2xl': ['2.4rem', { lineHeight: '3.2rem' }],
-      // '3xl': ['3rem', { lineHeight: '3.6rem' }],
-      // '4xl': ['3.6rem', { lineHeight: '4rem' }],
-      // '5xl': ['4.8rem', { lineHeight: '1' }],
-      // '6xl': ['6rem', { lineHeight: '1' }],
-      // '7xl': ['7.2rem', { lineHeight: '1' }],
-      // '8xl': ['9.6rem', { lineHeight: '1' }],
-      // '9xl': ['12.8rem', { lineHeight: '1' }],
       10: ['1rem'],
       11: ['1.1rem'],
       12: ['1.2rem'],

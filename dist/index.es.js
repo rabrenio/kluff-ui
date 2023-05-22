@@ -680,8 +680,8 @@ const ca = ({
       )
     ] })
   ] });
-}, Zs = Mo(ca);
-function Qs(e) {
+}, Xs = Mo(ca);
+function Zs(e) {
   return /* @__PURE__ */ oe.jsx(Go, { ...e, color: "inherit", LinkComponent: ra, children: /* @__PURE__ */ oe.jsx(ta, {}) });
 }
 function ot() {
@@ -871,7 +871,7 @@ const Oa = {
   horizontal: "left",
   vertical: "bottom"
 };
-function ec({
+function Qs({
   label: e,
   value: r,
   onChange: t
@@ -3443,7 +3443,7 @@ const Rs = Fs(), ws = Rs, As = (e) => Qr(e) && e !== "classes", ks = Ui({
     }
   }
 })), Ds = [5];
-function rc({
+function ec({
   autoHeight: e = !0,
   checkboxSelection: r = !0,
   disableSelectionOnClick: t = !0,
@@ -3463,13 +3463,13 @@ function rc({
     }
   );
 }
-function tc(e) {
+function rc(e) {
   return /* @__PURE__ */ oe.jsx("div", { className: "flex justify-center items-center h-full", children: /* @__PURE__ */ oe.jsx(Ho, { ...e }) });
 }
 function js(e) {
   return /* @__PURE__ */ oe.jsx(qo, { ...e, control: /* @__PURE__ */ oe.jsx(Jo, { className: "py-3" }) });
 }
-function nc({
+function tc({
   label: e,
   required: r,
   options: t,
@@ -3496,7 +3496,7 @@ function nc({
     )
   ] });
 }
-function oc({ children: e, ...r }) {
+function nc({ children: e, ...r }) {
   return /* @__PURE__ */ oe.jsx("div", { ...r, role: "tabpanel", children: /* @__PURE__ */ oe.jsx(ea, { className: "h-full p-24", children: e }) });
 }
 var tt = { exports: {} };
@@ -5032,7 +5032,7 @@ function zs(e) {
     })
   };
 }
-function Us(e = "dark", r = "ltr") {
+function oc(e = "dark", r = "ltr") {
   const t = Bn(
     {},
     Bs,
@@ -5046,11 +5046,7 @@ function Us(e = "dark", r = "ltr") {
     })
   );
 }
-const ac = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Us
-}, Symbol.toStringTag, { value: "Module" }));
-function ic(e = !1) {
+function ac(e = !1) {
   const [r, t] = nt(e), n = Vt(() => t((a) => !a), []);
   return {
     isOpen: r,
@@ -5059,15 +5055,15 @@ function ic(e = !1) {
   };
 }
 export {
-  Zs as AlertDialog,
-  Qs as BackButton,
-  ec as ColorPicker,
-  rc as DataGrid,
-  tc as LoadingIndicator,
+  Xs as AlertDialog,
+  Zs as BackButton,
+  Qs as ColorPicker,
+  ec as DataGrid,
+  rc as LoadingIndicator,
   js as RadioButton,
-  nc as RadioButtonGroup,
-  oc as TabPanel,
-  ac as themesConfig,
+  tc as RadioButtonGroup,
+  nc as TabPanel,
+  oc as generateMuiTheme,
   Ca as useMenuState,
-  ic as useToggle
+  ac as useToggle
 };
