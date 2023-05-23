@@ -1,16 +1,5 @@
-import {
-  DataGrid as ReactDataGrid,
-  GridToolbarQuickFilter,
-  type GridToolbarQuickFilterProps,
-  type DataGridProps,
-} from '@mui/x-data-grid'
+import { DataGrid as ReactDataGrid, type DataGridProps } from '@mui/x-data-grid'
 import { styled } from '@mui/material/styles'
-
-function QuickSearchToolbar(props: GridToolbarQuickFilterProps) {
-  return <GridToolbarQuickFilter debounceMs={300} {...props} />
-}
-
-export const DATA_GRID_COMPONENTS = { Toolbar: QuickSearchToolbar }
 
 const StyledDataGrid = styled(ReactDataGrid)(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
