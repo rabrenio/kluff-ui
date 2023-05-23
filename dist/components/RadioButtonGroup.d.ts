@@ -12,6 +12,6 @@ export type RadioButtonGroupProps = {
     required?: boolean;
     options: Option[];
     direction?: RadioButtonGroupDirections;
-    formControlClassName?: string;
-} & RadioGroupProps & Pick<FormControlProps, 'size'>;
-export default function RadioButtonGroup({ size, label, required, options, className, formControlClassName, direction, ...props }: RadioButtonGroupProps): import("react/jsx-runtime").JSX.Element;
+    formControlProps?: FormControlProps;
+} & RadioGroupProps;
+export default function RadioButtonGroup({ label, required, options, className, formControlProps, direction, ...props }: RadioButtonGroupProps): import("react/jsx-runtime").JSX.Element;

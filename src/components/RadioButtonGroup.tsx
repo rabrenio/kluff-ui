@@ -22,24 +22,22 @@ export type RadioButtonGroupProps = {
   required?: boolean
   options: Option[]
   direction?: RadioButtonGroupDirections
-  formControlClassName?: string
-} & RadioGroupProps &
-  Pick<FormControlProps, 'size'>
+  formControlProps?: FormControlProps
+} & RadioGroupProps
 
 export default function RadioButtonGroup({
-  size,
   label,
   required,
   options,
   className = '',
-  formControlClassName = '',
+  formControlProps,
   direction = RadioButtonGroupDirections.Vertical,
   ...props
 }: RadioButtonGroupProps) {
   return (
     <FormControl
-      size={size}
-      className={`flex flex-col ${formControlClassName}`}
+      {...formControlProps}
+      className={`flex flex-col ${formControlProps?.className ?? ''}`}
     >
       {label && <FormLabel required={required}>{label}</FormLabel>}
       <RadioGroup

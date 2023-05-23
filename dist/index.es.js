@@ -3471,34 +3471,33 @@ function js(e) {
   return /* @__PURE__ */ oe.jsx(qo, { ...e, control: /* @__PURE__ */ oe.jsx(Jo, { className: "py-3" }) });
 }
 function tc({
-  size: e,
-  label: r,
-  required: t,
-  options: n,
-  className: a = "",
-  formControlClassName: s = "",
-  direction: u = "vertical",
-  ...l
+  label: e,
+  required: r,
+  options: t,
+  className: n = "",
+  formControlProps: a,
+  direction: s = "vertical",
+  ...u
 }) {
   return /* @__PURE__ */ oe.jsxs(
     Xo,
     {
-      size: e,
-      className: `flex flex-col ${s}`,
+      ...a,
+      className: `flex flex-col ${(a == null ? void 0 : a.className) ?? ""}`,
       children: [
-        r && /* @__PURE__ */ oe.jsx(Zo, { required: t, children: r }),
+        e && /* @__PURE__ */ oe.jsx(Zo, { required: r, children: e }),
         /* @__PURE__ */ oe.jsx(
           Qo,
           {
-            ...l,
-            className: `${a} ${u === "horizontal" ? "!flex-row" : ""}`,
-            children: n.map((d) => /* @__PURE__ */ oe.jsx(
+            ...u,
+            className: `${n} ${s === "horizontal" ? "!flex-row" : ""}`,
+            children: t.map((l) => /* @__PURE__ */ oe.jsx(
               js,
               {
-                value: d.value,
-                label: d.label
+                value: l.value,
+                label: l.label
               },
-              d.value
+              l.value
             ))
           }
         )
