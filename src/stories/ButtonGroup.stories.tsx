@@ -1,3 +1,4 @@
+import { PlusOne } from '@mui/icons-material'
 import { LoadingButton } from '@mui/lab'
 import { Button, ButtonGroup } from '@mui/material'
 import type { StoryObj, Meta } from '@storybook/react'
@@ -28,7 +29,9 @@ export const WithLink: Story = {
   args: {
     children: (
       <MemoryRouter>
-        <LoadingButton>loading</LoadingButton>
+        <LoadingButton>
+          <PlusOne /> Add
+        </LoadingButton>
         <Button to="/test" component={Link}>
           link 1
         </Button>

@@ -881,18 +881,18 @@ const defaultThemeOptions: ThemeOptions = {
       styleOverrides: {
         root: ({ theme }) => ({
           boxShadow: 'none',
-          '& :first-child': {
+          '& > :first-child': {
             borderTopRightRadius: 0,
             borderBottomRightRadius: 0,
           },
-          '& :last-child': {
+          '& > :last-child': {
             borderTopLeftRadius: 0,
             borderBottomLeftRadius: 0,
           },
-          '& :not(:last-child)': {
+          '& > :not(:last-child)': {
             borderRight: `1px solid ${theme.palette.primary.dark}`,
           },
-          '& :not(:first-child):not(:last-child)': {
+          '& > :not(:first-child):not(:last-child)': {
             borderRadius: 0,
           },
         }),
