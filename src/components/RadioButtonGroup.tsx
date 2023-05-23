@@ -1,5 +1,6 @@
 import {
   FormControl,
+  type FormControlProps,
   FormLabel,
   RadioGroup,
   type RadioGroupProps,
@@ -21,18 +22,25 @@ export type RadioButtonGroupProps = {
   required?: boolean
   options: Option[]
   direction?: RadioButtonGroupDirections
-} & RadioGroupProps
+  formControlClassName?: string
+} & RadioGroupProps &
+  Pick<FormControlProps, 'size'>
 
 export default function RadioButtonGroup({
+  size,
   label,
   required,
   options,
   className = '',
+  formControlClassName = '',
   direction = RadioButtonGroupDirections.Vertical,
   ...props
 }: RadioButtonGroupProps) {
   return (
-    <FormControl className="flexf lex-col">
+    <FormControl
+      size={size}
+      className={`flex flex-col ${formControlClassName}`}
+    >
       {label && <FormLabel required={required}>{label}</FormLabel>}
       <RadioGroup
         {...props}

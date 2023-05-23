@@ -10,5 +10,6 @@ export type AlertDialogProps = {
     onConfirm: () => void;
     onClose: () => void;
 } & DialogProps;
-declare const _default: import("react").MemoExoticComponent<({ open, title, body, cancelText, confirmText, onClose, onConfirm, }: AlertDialogProps) => import("react/jsx-runtime").JSX.Element>;
+declare function AlertDialog({ open, title, body, cancelText, confirmText, onClose, onConfirm, }: AlertDialogProps): import("react/jsx-runtime").JSX.Element;
+declare const _default: import("react").MemoExoticComponent<typeof AlertDialog>;
 export default _default;

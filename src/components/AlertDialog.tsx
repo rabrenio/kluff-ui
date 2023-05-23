@@ -25,52 +25,50 @@ export type AlertDialogProps = {
   onClose: () => void
 } & DialogProps
 
-const AlertDialog = 
-  ({
-    open,
-    title,
-    body,
-    cancelText = 'Cancel',
-    confirmText = 'Confirm',
-    onClose,
-    onConfirm,
-  }: AlertDialogProps) => {
-    const [isLoading, setLoading] = useState(false)
-    return (
-      <Dialog open={open} onClose={onClose}>
-        {title && <DialogTitle>{title}</DialogTitle>}
-        <DialogContent>
-          <DialogContentText>{body}</DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button
-            variant="text"
-            color="inherit"
-            disabled={isLoading}
-            onClick={onClose}
-          >
-            {cancelText}
-          </Button>
-          <LoadingButton
-            variant="text"
-            color="inherit"
-            loading={isLoading}
-            onClick={async () => {
-              try {
-                setLoading(true)
-                await onConfirm()
-                onClose()
-              } finally {
-                setLoading(false)
-              }
-            }}
-          >
-            {confirmText}
-          </LoadingButton>
-        </DialogActions>
-      </Dialog>
-    )
-  }
-
+function AlertDialog({
+  open,
+  title,
+  body,
+  cancelText = 'Cancel',
+  confirmText = 'Confirm',
+  onClose,
+  onConfirm,
+}: AlertDialogProps) {
+  const [isLoading, setLoading] = useState(false)
+  return (
+    <Dialog open={open} onClose={onClose}>
+      {title && <DialogTitle>{title}</DialogTitle>}
+      <DialogContent>
+        <DialogContentText>{body}</DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button
+          variant="text"
+          color="inherit"
+          disabled={isLoading}
+          onClick={onClose}
+        >
+          {cancelText}
+        </Button>
+        <LoadingButton
+          variant="text"
+          color="inherit"
+          loading={isLoading}
+          onClick={async () => {
+            try {
+              setLoading(true)
+              await onConfirm()
+              onClose()
+            } finally {
+              setLoading(false)
+            }
+          }}
+        >
+          {confirmText}
+        </LoadingButton>
+      </DialogActions>
+    </Dialog>
+  )
+}
 
 export default memo(AlertDialog)

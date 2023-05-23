@@ -638,7 +638,7 @@ Check the top-level render call using <` + T + ">.");
 }
 process.env.NODE_ENV === "production" ? zt.exports = ia() : zt.exports = sa();
 var oe = zt.exports;
-const ca = ({
+function ca({
   open: e,
   title: r,
   body: t,
@@ -646,7 +646,7 @@ const ca = ({
   confirmText: a = "Confirm",
   onClose: s,
   onConfirm: u
-}) => {
+}) {
   const [l, d] = nt(!1);
   return /* @__PURE__ */ oe.jsxs(Bo, { open: e, onClose: s, children: [
     r && /* @__PURE__ */ oe.jsx(Lo, { children: r }),
@@ -680,7 +680,8 @@ const ca = ({
       )
     ] })
   ] });
-}, Xs = Mo(ca);
+}
+const Xs = Mo(ca);
 function Zs(e) {
   return /* @__PURE__ */ oe.jsx(Go, { ...e, color: "inherit", LinkComponent: ra, children: /* @__PURE__ */ oe.jsx(ta, {}) });
 }
@@ -3470,31 +3471,40 @@ function js(e) {
   return /* @__PURE__ */ oe.jsx(qo, { ...e, control: /* @__PURE__ */ oe.jsx(Jo, { className: "py-3" }) });
 }
 function tc({
-  label: e,
-  required: r,
-  options: t,
-  className: n = "",
-  direction: a = "vertical",
-  ...s
+  size: e,
+  label: r,
+  required: t,
+  options: n,
+  className: a = "",
+  formControlClassName: s = "",
+  direction: u = "vertical",
+  ...l
 }) {
-  return /* @__PURE__ */ oe.jsxs(Xo, { className: "flexf lex-col", children: [
-    e && /* @__PURE__ */ oe.jsx(Zo, { required: r, children: e }),
-    /* @__PURE__ */ oe.jsx(
-      Qo,
-      {
-        ...s,
-        className: `${n} ${a === "horizontal" ? "!flex-row" : ""}`,
-        children: t.map((u) => /* @__PURE__ */ oe.jsx(
-          js,
+  return /* @__PURE__ */ oe.jsxs(
+    Xo,
+    {
+      size: e,
+      className: `flex flex-col ${s}`,
+      children: [
+        r && /* @__PURE__ */ oe.jsx(Zo, { required: t, children: r }),
+        /* @__PURE__ */ oe.jsx(
+          Qo,
           {
-            value: u.value,
-            label: u.label
-          },
-          u.value
-        ))
-      }
-    )
-  ] });
+            ...l,
+            className: `${a} ${u === "horizontal" ? "!flex-row" : ""}`,
+            children: n.map((d) => /* @__PURE__ */ oe.jsx(
+              js,
+              {
+                value: d.value,
+                label: d.label
+              },
+              d.value
+            ))
+          }
+        )
+      ]
+    }
+  );
 }
 function nc({ children: e, ...r }) {
   return /* @__PURE__ */ oe.jsx("div", { ...r, role: "tabpanel", children: /* @__PURE__ */ oe.jsx(ea, { className: "h-full p-24", children: e }) });

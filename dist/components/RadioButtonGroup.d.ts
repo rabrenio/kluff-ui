@@ -1,4 +1,4 @@
-import { type RadioGroupProps } from '@mui/material';
+import { type FormControlProps, type RadioGroupProps } from '@mui/material';
 export declare enum RadioButtonGroupDirections {
     Horizontal = "horizontal",
     Vertical = "vertical"
@@ -12,5 +12,6 @@ export type RadioButtonGroupProps = {
     required?: boolean;
     options: Option[];
     direction?: RadioButtonGroupDirections;
-} & RadioGroupProps;
-export default function RadioButtonGroup({ label, required, options, className, direction, ...props }: RadioButtonGroupProps): import("react/jsx-runtime").JSX.Element;
+    formControlClassName?: string;
+} & RadioGroupProps & Pick<FormControlProps, 'size'>;
+export default function RadioButtonGroup({ size, label, required, options, className, formControlClassName, direction, ...props }: RadioButtonGroupProps): import("react/jsx-runtime").JSX.Element;

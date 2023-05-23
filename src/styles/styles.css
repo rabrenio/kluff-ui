@@ -30,6 +30,10 @@
   flex-direction: row !important
 }
 
+.flex-col {
+  flex-direction: column !important
+}
+
 .items-center {
   align-items: center !important
 }
