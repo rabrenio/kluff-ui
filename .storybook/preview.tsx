@@ -7,6 +7,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import generateMuiTheme from '../src/utils/theme'
+import '../src/styles/base.css'
 import '../src/styles/styles.css'
 
 export const parameters = {
