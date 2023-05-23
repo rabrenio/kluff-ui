@@ -1,9 +1,11 @@
+import { type ReactNode } from 'react'
 import {
   FormControl,
   type FormControlProps,
   FormLabel,
   RadioGroup,
   type RadioGroupProps,
+  FormHelperText,
 } from '@mui/material'
 import RadioButton from './RadioButton'
 
@@ -21,6 +23,8 @@ export type RadioButtonGroupProps = {
   label?: string
   required?: boolean
   options: Option[]
+  error?: boolean
+  helperText?: ReactNode
   direction?: RadioButtonGroupDirections
   formControlProps?: FormControlProps
 } & RadioGroupProps
@@ -29,6 +33,8 @@ export default function RadioButtonGroup({
   label,
   required,
   options,
+  error,
+  helperText,
   className = '',
   formControlProps,
   direction = RadioButtonGroupDirections.Vertical,
@@ -54,6 +60,7 @@ export default function RadioButtonGroup({
           />
         ))}
       </RadioGroup>
+      {error && <FormHelperText>{helperText}</FormHelperText>}
     </FormControl>
   )
 }
