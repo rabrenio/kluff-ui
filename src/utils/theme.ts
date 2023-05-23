@@ -1,5 +1,6 @@
 import merge from 'lodash.merge'
 import { createTheme, type ThemeOptions } from '@mui/material'
+import type {} from '@mui/lab/themeAugmentation'
 import { fuseDark, skyBlue } from './colors'
 import { blueGrey } from '@mui/material/colors'
 
@@ -839,6 +840,17 @@ const defaultThemeOptions: ThemeOptions = {
         },
       },
     },
+    MuiLoadingButton: {
+      defaultProps: {
+        size: 'small',
+        variant: 'contained',
+      },
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         size: 'small',
@@ -869,9 +881,19 @@ const defaultThemeOptions: ThemeOptions = {
       styleOverrides: {
         root: ({ theme }) => ({
           boxShadow: 'none',
+          '& :first-child': {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0,
+          },
+          '& :last-child': {
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0,
+          },
+          '& :not(:last-child)': {
+            borderRight: `1px solid ${theme.palette.primary.dark}`,
+          },
           '& :not(:first-child):not(:last-child)': {
             borderRadius: 0,
-            borderRight: `1px solid ${theme.palette.primary.dark}`,
           },
         }),
       },

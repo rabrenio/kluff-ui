@@ -1,3 +1,4 @@
+import { LoadingButton } from '@mui/lab'
 import { Button, ButtonGroup } from '@mui/material'
 import type { StoryObj, Meta } from '@storybook/react'
 import { Link, MemoryRouter } from 'react-router-dom'
@@ -27,11 +28,12 @@ export const WithLink: Story = {
   args: {
     children: (
       <MemoryRouter>
-        <Button href="/test" LinkComponent={Link}>
+        <LoadingButton>loading</LoadingButton>
+        <Button to="/test" component={Link}>
           link 1
         </Button>
         <Button>btn 1</Button>
-        <Button href="/test" LinkComponent={Link}>
+        <Button to="/test" component={Link}>
           link 2
         </Button>
         <Button>btn 2</Button>

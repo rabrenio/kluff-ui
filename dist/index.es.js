@@ -4865,6 +4865,17 @@ const Bn = /* @__PURE__ */ Wn(Is), dr = {
         }
       }
     },
+    MuiLoadingButton: {
+      defaultProps: {
+        size: "small",
+        variant: "contained"
+      },
+      styleOverrides: {
+        root: {
+          textTransform: "none"
+        }
+      }
+    },
     MuiButton: {
       defaultProps: {
         size: "small",
@@ -4895,9 +4906,19 @@ const Bn = /* @__PURE__ */ Wn(Is), dr = {
       styleOverrides: {
         root: ({ theme: e }) => ({
           boxShadow: "none",
-          "& :not(:first-child):not(:last-child)": {
-            borderRadius: 0,
+          "& :first-child": {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0
+          },
+          "& :last-child": {
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0
+          },
+          "& :not(:last-child)": {
             borderRight: `1px solid ${e.palette.primary.dark}`
+          },
+          "& :not(:first-child):not(:last-child)": {
+            borderRadius: 0
           }
         })
       }
