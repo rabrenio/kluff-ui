@@ -1,5 +1,7 @@
 export { default as AlertDialog } from './AlertDialog';
 export { default as BackButton } from './BackButton';
+export { default as ButtonWithConfirm } from './ButtonWithConfirm';
+export { default as IconButtonWithConfirm } from './IconButtonWithConfirm';
 export { default as ColorPicker } from './ColorPicker';
 export { default as DataGrid } from './DataGrid';
 export { default as LoadingIndicator } from './LoadingIndicator';
