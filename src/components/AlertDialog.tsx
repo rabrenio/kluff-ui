@@ -27,8 +27,8 @@ export type AlertDialogProps = {
 
 function AlertDialog({
   open,
-  title,
   body,
+  title = 'Confirm',
   cancelText = 'Cancel',
   confirmText = 'Confirm',
   onClose,
@@ -37,7 +37,7 @@ function AlertDialog({
   const [isLoading, setLoading] = useState(false)
   return (
     <Dialog open={open} onClose={onClose}>
-      {title && <DialogTitle>{title}</DialogTitle>}
+      <DialogTitle>{title}</DialogTitle>
       <DialogContent>
         <DialogContentText>{body}</DialogContentText>
       </DialogContent>
