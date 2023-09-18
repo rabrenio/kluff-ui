@@ -3,12 +3,14 @@ import AlertDialog, { type AlertDialogProps } from './AlertDialog'
 import { useToggle } from '..'
 
 type Props = Omit<LoadingButtonProps, 'onClick'> & {
-  alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose'>
+  onConfirm: AlertDialogProps['onConfirm']
+  alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose' | 'onConfirm'>
 }
 
 export default function ButtonWithConfirm({
   children,
   alertDialogProps,
+  onConfirm,
   ...props
 }: Props) {
   const toggle = useToggle()
@@ -21,6 +23,7 @@ export default function ButtonWithConfirm({
         {...alertDialogProps}
         open={toggle.isOpen}
         onClose={toggle.toggle}
+        onConfirm={onConfirm}
       />
     </>
   )

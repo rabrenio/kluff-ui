@@ -6,8 +6,9 @@ type Props = Omit<IconButtonProps, 'onClick' | 'children'> & {
     loading?: boolean;
     icon: SvgIconComponent;
     iconProps: ComponentProps<SvgIconComponent>;
-    alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose'>;
+    alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose' | 'onConfirm'>;
     circularProgressProps: CircularProgressProps;
+    onConfirm: AlertDialogProps['onConfirm'];
 };
-export default function IconButtonWithConfirm({ loading, className, icon, iconProps, alertDialogProps, circularProgressProps, ...props }: Props): import("react/jsx-runtime").JSX.Element;
+export default function IconButtonWithConfirm({ loading, className, icon, iconProps, onConfirm, alertDialogProps, circularProgressProps, ...props }: Props): import("react/jsx-runtime").JSX.Element;
 export {};

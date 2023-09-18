@@ -14,9 +14,9 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     children: 'Hello there!',
+    onConfirm: () => alert('confirmed'),
     alertDialogProps: {
       body: 'Are you sure you want to remove this item?',
-      onConfirm: () => alert('confirmed'),
     },
   },
 }

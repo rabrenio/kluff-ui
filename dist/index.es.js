@@ -688,17 +688,19 @@ function rc(e) {
 function tc({
   children: e,
   alertDialogProps: r,
-  ...t
+  onConfirm: t,
+  ...n
 }) {
-  const n = co();
+  const a = co();
   return /* @__PURE__ */ K.jsxs(K.Fragment, { children: [
-    /* @__PURE__ */ K.jsx(Un, { ...t, onClick: n.toggle, children: e }),
+    /* @__PURE__ */ K.jsx(Un, { ...n, onClick: a.toggle, children: e }),
     /* @__PURE__ */ K.jsx(
       Vn,
       {
         ...r,
-        open: n.isOpen,
-        onClose: n.toggle
+        open: a.isOpen,
+        onClose: a.toggle,
+        onConfirm: t
       }
     )
   ] });
@@ -712,28 +714,29 @@ function nc({
   className: r = "",
   icon: t,
   iconProps: n = {},
-  alertDialogProps: a,
-  circularProgressProps: s = da,
-  ...u
+  onConfirm: a,
+  alertDialogProps: s,
+  circularProgressProps: u = da,
+  ...f
 }) {
-  const f = co(), d = t;
+  const d = co(), p = t;
   return /* @__PURE__ */ K.jsxs(K.Fragment, { children: [
     /* @__PURE__ */ K.jsxs(
       Wn,
       {
-        ...u,
+        ...f,
         className: `${r} relative`,
-        onClick: f.toggle,
+        onClick: d.toggle,
         children: [
           e && /* @__PURE__ */ K.jsx(
             Yn,
             {
-              ...s,
-              className: `${s.className} absolute`
+              ...u,
+              className: `${u.className} absolute`
             }
           ),
           /* @__PURE__ */ K.jsx(
-            d,
+            p,
             {
               ...n,
               className: `${e ? "invisible" : ""} ${n.className ?? ""}`
@@ -745,9 +748,10 @@ function nc({
     /* @__PURE__ */ K.jsx(
       Vn,
       {
-        ...a,
-        open: f.isOpen,
-        onClose: f.toggle
+        ...s,
+        open: d.isOpen,
+        onClose: d.toggle,
+        onConfirm: a
       }
     )
   ] });

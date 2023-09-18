@@ -1,7 +1,8 @@
 import { type LoadingButtonProps } from '@mui/lab';
 import { type AlertDialogProps } from './AlertDialog';
 type Props = Omit<LoadingButtonProps, 'onClick'> & {
-    alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose'>;
+    onConfirm: AlertDialogProps['onConfirm'];
+    alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose' | 'onConfirm'>;
 };
-export default function ButtonWithConfirm({ children, alertDialogProps, ...props }: Props): import("react/jsx-runtime").JSX.Element;
+export default function ButtonWithConfirm({ children, alertDialogProps, onConfirm, ...props }: Props): import("react/jsx-runtime").JSX.Element;
 export {};
