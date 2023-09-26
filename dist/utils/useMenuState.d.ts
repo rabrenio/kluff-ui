@@ -1,6 +1,6 @@
 /// <reference types="react" />
-export default function useMenuState(): {
-    anchorEl: HTMLElement | null;
-    setAnchorEl: import("react").Dispatch<import("react").SetStateAction<HTMLElement | null>>;
+export default function useMenuState<T = HTMLElement>(): {
+    anchorEl: T | null;
+    setAnchorEl: import("react").Dispatch<import("react").SetStateAction<T | null>>;
     handleClose: () => void;
 };

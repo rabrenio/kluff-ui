@@ -1,11 +1,9 @@
-import type { ReactNode } from 'react'
+import type { ComponentProps } from 'react'
 import { Box } from '@mui/material'
 
-type Props = {
-  children: ReactNode
-}
+export type TabPanelProps = Omit<ComponentProps<'div'>, 'role'>
 
-export default function TabPanel({ children, ...other }: Props) {
+export default function TabPanel({ children, ...other }: TabPanelProps) {
   return (
     <div {...other} role="tabpanel">
       <Box className="h-full p-24">{children}</Box>

@@ -1,10 +1,10 @@
 import { PlusOne } from '@mui/icons-material'
 import { LoadingButton } from '@mui/lab'
-import { Button, ButtonGroup } from '@mui/material'
+import { Button, ButtonGroup, type ButtonGroupProps } from '@mui/material'
 import type { StoryObj, Meta } from '@storybook/react'
 import { Link, MemoryRouter } from 'react-router-dom'
 
-const meta: Meta<typeof ButtonGroup> = {
+const meta: Meta<ButtonGroupProps> = {
   title: 'Basic/ButtonGroup',
   tags: ['autodocs'],
   component: ButtonGroup,

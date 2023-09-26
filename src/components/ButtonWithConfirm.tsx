@@ -2,7 +2,7 @@ import { LoadingButton, type LoadingButtonProps } from '@mui/lab'
 import AlertDialog, { type AlertDialogProps } from './AlertDialog'
 import { useToggle } from '..'
 
-type Props = Omit<LoadingButtonProps, 'onClick'> & {
+export type ButtonWithConfirmProps = Omit<LoadingButtonProps, 'onClick'> & {
   onConfirm: AlertDialogProps['onConfirm']
   alertDialogProps: Omit<AlertDialogProps, 'open' | 'onClose' | 'onConfirm'>
 }
@@ -12,7 +12,7 @@ export default function ButtonWithConfirm({
   alertDialogProps,
   onConfirm,
   ...props
-}: Props) {
+}: ButtonWithConfirmProps) {
   const toggle = useToggle()
   return (
     <>

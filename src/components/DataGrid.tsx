@@ -1,4 +1,7 @@
-import { DataGrid as ReactDataGrid, type DataGridProps } from '@mui/x-data-grid'
+import {
+  DataGrid as ReactDataGrid,
+  type DataGridProps as ReactDataGridProps,
+} from '@mui/x-data-grid'
 import { styled } from '@mui/material/styles'
 
 const StyledDataGrid = styled(ReactDataGrid)(({ theme }) => ({
@@ -37,6 +40,7 @@ const StyledDataGrid = styled(ReactDataGrid)(({ theme }) => ({
 
 const DEFAULT_ROWS_PER_PAGE_OPTIONS = [5]
 
+export type DataGridProps = ReactDataGridProps
 export default function DataGrid({
   autoHeight = true,
   checkboxSelection = true,

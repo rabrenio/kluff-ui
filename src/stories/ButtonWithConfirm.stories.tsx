@@ -1,7 +1,9 @@
-import { ButtonWithConfirm } from '../components'
 import type { StoryObj, Meta } from '@storybook/react'
+import ButtonWithConfirm, {
+  type ButtonWithConfirmProps,
+} from '../components/ButtonWithConfirm'
 
-const meta: Meta<typeof ButtonWithConfirm> = {
+const meta: Meta<ButtonWithConfirmProps> = {
   title: 'Basic/ButtonWithConfirm',
   tags: ['autodocs'],
   component: ButtonWithConfirm,
