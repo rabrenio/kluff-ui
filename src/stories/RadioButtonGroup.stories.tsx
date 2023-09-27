@@ -6,9 +6,7 @@ import RadioButtonGroup, {
   type RadioButtonGroupProps,
 } from '../components/RadioButtonGroup'
 
-type MetaProps = Pick<RadioButtonGroupProps, 'label' | 'options'>
-
-function RadioButtonGroupContainer(props: MetaProps) {
+function RadioButtonGroupContainer(props: RadioButtonGroupProps) {
   const [value, setValue] = useState<Option['value']>(null!)
   return (
     <RadioButtonGroup
@@ -22,7 +20,9 @@ function RadioButtonGroupContainer(props: MetaProps) {
 const meta: Meta<typeof RadioButtonGroup> = {
   title: 'Basic/RadioButtonGroup',
   tags: ['autodocs'],
-  component: (props: MetaProps) => <RadioButtonGroupContainer {...props} />,
+  component: (props: RadioButtonGroupProps) => (
+    <RadioButtonGroupContainer {...props} />
+  ),
 }
 
 export default meta

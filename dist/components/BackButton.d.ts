@@ -1,2 +1,3 @@
 import { type IconButtonProps } from '@mui/material';
-export default function BackButton(props: IconButtonProps): import("react/jsx-runtime").JSX.Element;
+export type BackButtonProps = IconButtonProps;
+export default function BackButton(props: BackButtonProps): import("react/jsx-runtime").JSX.Element;

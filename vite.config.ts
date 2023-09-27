@@ -19,7 +19,6 @@ export default defineConfig({
       formats: ['es', 'umd'],
       fileName: format => `index.${format}.js`,
     },
-    // cssCodeSplit: true,
     rollupOptions: {
       external: Object.keys(peerDependencies),
       output: {

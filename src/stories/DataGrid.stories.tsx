@@ -1,8 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { DataGrid } from '..'
 import type { GridColDef, GridValueGetterParams } from '@mui/x-data-grid'
+import DataGrid, { type DataGridProps } from '../components/DataGrid'
 
-const meta: Meta<typeof DataGrid> = {
+const meta: Meta<DataGridProps> = {
   title: 'Basic/DataGrid',
   tags: ['autodocs'],
   component: DataGrid,

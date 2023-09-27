@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { BackButton } from '../components'
+import BackButton, { type BackButtonProps } from '../components/BackButton'
 
-const meta: Meta<typeof BackButton> = {
+const meta: Meta<BackButtonProps> = {
   title: 'Basic/BackButton',
   tags: ['autodocs'],
   component: BackButton,

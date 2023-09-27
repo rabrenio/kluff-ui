@@ -1,8 +1,10 @@
 import { Delete } from '@mui/icons-material'
-import { IconButtonWithConfirm } from '../components'
 import type { StoryObj, Meta } from '@storybook/react'
+import IconButtonWithConfirm, {
+  type IconButtonWithConfirmProps,
+} from '../components/IconButtonWithConfirm'
 
-const meta: Meta<typeof IconButtonWithConfirm> = {
+const meta: Meta<IconButtonWithConfirmProps> = {
   title: 'Basic/IconButtonWithConfirm',
   tags: ['autodocs'],
   component: IconButtonWithConfirm,

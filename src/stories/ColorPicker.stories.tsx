@@ -2,9 +2,7 @@ import { useState } from 'react'
 import type { StoryObj, Meta } from '@storybook/react'
 import ColorPicker, { type ColorPickerProps } from '../components/ColorPicker'
 
-type OptionalProps = Pick<ColorPickerProps, 'label'>
-
-function ColorPickerContainer(props: OptionalProps) {
+function ColorPickerContainer(props: ColorPickerProps) {
   const [color, setColor] = useState('#000')
   return <ColorPicker {...props} value={color} onChange={setColor} />
 }
@@ -12,7 +10,7 @@ function ColorPickerContainer(props: OptionalProps) {
 const meta: Meta<typeof ColorPicker> = {
   title: 'Basic/ColorPicker',
   tags: ['autodocs'],
-  component: (props: OptionalProps) => <ColorPickerContainer {...props} />,
+  component: (props: ColorPickerProps) => <ColorPickerContainer {...props} />,
 }
 
 export default meta

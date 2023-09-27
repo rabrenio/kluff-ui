@@ -1,7 +1,7 @@
-import { Button } from '@mui/material'
+import { Button, type ButtonProps } from '@mui/material'
 import type { StoryObj, Meta } from '@storybook/react'
 
-const meta: Meta<typeof Button> = {
+const meta: Meta<ButtonProps> = {
   title: 'Basic/Button',
   tags: ['autodocs'],
   component: Button,

@@ -1,7 +1,9 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { LoadingIndicator } from '../components'
+import LoadingIndicator, {
+  type LoadingIndicatorProps,
+} from '../components/LoadingIndicator'
 
-const meta: Meta<typeof LoadingIndicator> = {
+const meta: Meta<LoadingIndicatorProps> = {
   title: 'Basic/LoadingIndicator',
   tags: ['autodocs'],
   component: LoadingIndicator,

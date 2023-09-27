@@ -20,7 +20,7 @@ function AlertDialogContainer(props: AlertDialogProps) {
   )
 }
 
-const meta: Meta<typeof AlertDialog> = {
+const meta: Meta<AlertDialogProps> = {
   title: 'Basic/AlertDialog',
   tags: ['autodocs'],
   component: (props: AlertDialogProps) => <AlertDialogContainer {...props} />,

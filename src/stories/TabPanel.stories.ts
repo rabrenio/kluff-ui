@@ -1,7 +1,7 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import TabPanel from '../components/TabPanel'
+import TabPanel, { type TabPanelProps } from '../components/TabPanel'
 
-const meta: Meta<typeof TabPanel> = {
+const meta: Meta<TabPanelProps> = {
   title: 'Basic/TabPanel',
   tags: ['autodocs'],
   component: TabPanel,

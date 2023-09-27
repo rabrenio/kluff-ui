@@ -14,7 +14,10 @@ const DEFAULT_CIRCULAR_PROGRESS_PROPS = {
   className: '',
 }
 
-type Props = Omit<IconButtonProps, 'onClick' | 'children'> & {
+export type IconButtonWithConfirmProps = Omit<
+  IconButtonProps,
+  'onClick' | 'children'
+> & {
   loading?: boolean
   icon: SvgIconComponent
   iconProps: ComponentProps<SvgIconComponent>
@@ -32,7 +35,7 @@ export default function IconButtonWithConfirm({
   alertDialogProps,
   circularProgressProps = DEFAULT_CIRCULAR_PROGRESS_PROPS,
   ...props
-}: Props) {
+}: IconButtonWithConfirmProps) {
   const toggle = useToggle()
   const Icon = icon
   return (
