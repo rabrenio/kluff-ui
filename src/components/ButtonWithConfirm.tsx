@@ -1,6 +1,6 @@
 import { LoadingButton, type LoadingButtonProps } from '@mui/lab'
 import AlertDialog, { type AlertDialogProps } from './AlertDialog'
-import { useToggle } from '..'
+import useToggle from '../utils/useToggle'
 
 export type ButtonWithConfirmProps = Omit<LoadingButtonProps, 'onClick'> & {
   onConfirm: AlertDialogProps['onConfirm']
