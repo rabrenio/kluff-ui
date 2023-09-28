@@ -70,16 +70,34 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/main.js",
-  "module": "./dist/main.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/main.js",
-    "./utils/theme": "./dist/utils/theme.js",
-    "./utils/useToggle": "./dist/utils/useToggle.js",
-    "./utils/useMenuState": "./dist/utils/useMenuState.js",
-    "./utils/objectFields": "./dist/utils/objectFields.js",
-    "./style.css": "./dist/style.css"
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./utils/theme": {
+      "import": "./dist/utils/theme.es.js",
+      "require": "./dist/utils/theme.umd.js"
+    },
+    "./utils/useToggle": {
+      "import": "./dist/utils/useToggle.es.js",
+      "require": "./dist/utils/useToggle.umd.js"
+    },
+    "./utils/useMenuState": {
+      "import": "./dist/utils/useMenuState.es.js",
+      "require": "./dist/utils/useMenuState.umd.js"
+    },
+    "./utils/objectFields": {
+      "import": "./dist/utils/objectFields.es.js",
+      "require": "./dist/utils/objectFields.umd.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
   },
   "peerDependencies": {
     "@emotion/react": "11.9.3",
