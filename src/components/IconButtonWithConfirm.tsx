@@ -7,7 +7,7 @@ import {
 } from '@mui/material'
 import { type SvgIconComponent } from '@mui/icons-material'
 import AlertDialog, { type AlertDialogProps } from './AlertDialog'
-import { useToggle } from '..'
+import useToggle from '../utils/useToggle'
 
 const DEFAULT_CIRCULAR_PROGRESS_PROPS = {
   size: 16,

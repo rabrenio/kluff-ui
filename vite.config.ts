@@ -14,10 +14,21 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: {
+        main: path.resolve(__dirname, 'src/index.ts'),
+        'utils/theme': path.resolve(__dirname, 'src/utils/theme.ts'),
+        'utils/useToggle': path.resolve(__dirname, 'src/utils/useToggle.ts'),
+        'utils/useMenuState': path.resolve(
+          __dirname,
+          'src/utils/useMenuState.ts'
+        ),
+        'utils/objectFields': path.resolve(
+          __dirname,
+          'src/utils/objectFields.ts'
+        ),
+      },
       name: '@kluff/ui',
-      formats: ['es', 'umd'],
-      fileName: format => `index.${format}.js`,
+      formats: ['es'],
     },
     rollupOptions: {
       external: Object.keys(peerDependencies),

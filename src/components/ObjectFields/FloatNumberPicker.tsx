@@ -4,7 +4,7 @@ import NumberPicker, {
   type NumberPickerProps,
   NUMBER_PICKER_DEFAULT_INPUT_PROPS,
 } from './NumberPicker'
-import { MAX_DECIMAL_PLACE, MIN_DECIMAL_PLACE } from './utils'
+import { MAX_DECIMAL_PLACE, MIN_DECIMAL_PLACE } from '../../utils/objectFields'
 
 const FLOAT_NUMBER_DEFAULT_INPUT_PROPS = {
   ...NUMBER_PICKER_DEFAULT_INPUT_PROPS,

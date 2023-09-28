@@ -11,8 +11,8 @@ import {
   ClickAwayListener,
 } from '@mui/material'
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
-import { useMenuState } from '../..'
 import NumberPicker, { type NumberPickerProps } from './NumberPicker'
+import useMenuState from '../../utils/useMenuState'
 
 function canRoundOff(value: string) {
   return value === '60'
