@@ -5097,7 +5097,7 @@ const oh = It(
       }
     );
   }
-), sh = It(
+), mu = It((o, l) => /* @__PURE__ */ ke.jsx(hi, { ...o, ref: l })), sh = It(
   ({ rows: o = 4, ...l }, F) => /* @__PURE__ */ ke.jsx(hi, { ...l, multiline: !0, ref: F, rows: o })
 );
 function Hn(o, l, F) {
@@ -5113,7 +5113,7 @@ function Hn(o, l, F) {
   let h = Math[o]((l * v).toPrecision(15)) / v;
   return f && (h = -h), h;
 }
-const mu = Hn.bind(void 0, "round");
+const gu = Hn.bind(void 0, "round");
 Hn.bind(void 0, "ceil");
 Hn.bind(void 0, "floor");
 const Bt = {
@@ -5131,13 +5131,13 @@ const Bt = {
   Select: "Select",
   Text: "Text",
   Time: "Time"
-}, ah = (o) => o === Bt.Text, lh = (o) => o === Bt.LongText, ch = (o) => o === Bt.Int, uh = (o) => o === Bt.LongInt, hh = (o) => o === Bt.Float, dh = (o) => o === Bt.Currency, fh = (o) => o === Bt.Check, ph = (o) => o === Bt.Date, mh = (o) => o === Bt.DateTime, gh = (o) => o === Bt.Time, vh = (o) => o === Bt.Duration, yh = (o) => o === Bt.Phone, bh = (o) => o === Bt.Select, Ch = (o) => o === Bt.JSON, Dr = 0, gu = 100, vu = {
+}, ah = (o) => o === Bt.Text, lh = (o) => o === Bt.LongText, ch = (o) => o === Bt.Int, uh = (o) => o === Bt.LongInt, hh = (o) => o === Bt.Float, dh = (o) => o === Bt.Currency, fh = (o) => o === Bt.Check, ph = (o) => o === Bt.Date, mh = (o) => o === Bt.DateTime, gh = (o) => o === Bt.Time, vh = (o) => o === Bt.Duration, yh = (o) => o === Bt.Phone, bh = (o) => o === Bt.Select, Ch = (o) => o === Bt.JSON, Dr = 0, vu = 100, yu = {
   ...ho,
   max: 24
-}, yu = It(
+}, bu = It(
   ({
     precision: o = 2,
-    inputProps: l = vu,
+    inputProps: l = yu,
     onChange: F,
     ...f
   }, v) => {
@@ -5149,7 +5149,7 @@ const Bt = {
         ref: v,
         inputProps: l,
         onChange: (a) => {
-          const s = a.target.value, e = mu(
+          const s = a.target.value, e = gu(
             Number.parseFloat(s),
             h
           );
@@ -5157,15 +5157,15 @@ const Bt = {
             ...a,
             target: {
               ...a.target,
-              value: Number.isNaN(e) || h < Dr || h > gu ? s : String(e.toFixed(h))
+              value: Number.isNaN(e) || h < Dr || h > vu ? s : String(e.toFixed(h))
             }
           });
         }
       }
     );
   }
-), wh = It((o, l) => /* @__PURE__ */ ke.jsx(yu, { ...o, ref: l })), bu = It((o, l) => /* @__PURE__ */ ke.jsx(hi, { ...o, ref: l })), Eh = It(
-  (o, l) => /* @__PURE__ */ ke.jsx(bu, { ...o, type: "tel", ref: l })
+), wh = It((o, l) => /* @__PURE__ */ ke.jsx(bu, { ...o, ref: l })), Eh = It(
+  (o, l) => /* @__PURE__ */ ke.jsx(mu, { ...o, type: "tel", ref: l })
 );
 function Ah({
   label: o,
@@ -29226,17 +29226,18 @@ export {
   Yu as ButtonWithConfirm,
   th as Checkbox,
   Qu as ColorPicker,
+  wh as Currency,
   du as DATE_FORMAT_OUT,
   Xu as DataGrid,
   ih as DatePicker,
   nh as DateTimePicker,
   oh as Duration,
-  yu as FloatNumberPicker,
+  bu as FloatNumberPicker,
   Ju as IconButtonWithConfirm,
   Fh as JsonEditor,
   qu as LoadingIndicator,
   sh as LongText,
-  gu as MAX_DECIMAL_PLACE,
+  vu as MAX_DECIMAL_PLACE,
   Dr as MIN_DECIMAL_PLACE,
   fo as NumberPicker,
   Bt as OBJECT_FIELD_FIELD_TYPE,
@@ -29244,9 +29245,9 @@ export {
   Hl as RadioButton,
   Zu as RadioButtonGroup,
   Ah as Select,
-  wh as TCurrencyext,
   hu as TIME_FORMAT_OUT,
   eh as TabPanel,
+  mu as Text,
   rh as TimePicker,
   uu as convertTimeToDate,
   uo as formateDate,
