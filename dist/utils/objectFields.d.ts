@@ -1,6 +1,6 @@
-type ObjectFieldFiedType = typeof OBJECT_FIELD_FIELD_TYPE;
-export type ObjectFieldFiedTypeValue = ObjectFieldFiedType[keyof ObjectFieldFiedType];
-export declare const OBJECT_FIELD_FIELD_TYPE: {
+type ObjectFieldType = typeof OBJECT_FIELD_TYPE;
+export type ObjectFieldTypeValue = ObjectFieldType[keyof ObjectFieldType];
+export declare const OBJECT_FIELD_TYPE: {
     readonly Check: "Check";
     readonly Currency: "Currency";
     readonly Date: "Date";
@@ -9,6 +9,7 @@ export declare const OBJECT_FIELD_FIELD_TYPE: {
     readonly Float: "Float";
     readonly Int: "Int";
     readonly JSON: "JSON";
+    readonly Link: "Link";
     readonly LongInt: "Long Int";
     readonly LongText: "Long Text";
     readonly Phone: "Phone";
@@ -16,20 +17,21 @@ export declare const OBJECT_FIELD_FIELD_TYPE: {
     readonly Text: "Text";
     readonly Time: "Time";
 };
-export declare const isFieldText: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldLongText: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldInt: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldLongInt: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldFloat: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldCurrency: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldCheck: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldDate: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldDateTime: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldTime: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldDuration: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldPhone: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldSelect: (type: ObjectFieldFiedTypeValue) => boolean;
-export declare const isFieldJSON: (type: ObjectFieldFiedTypeValue) => boolean;
+export declare const isFieldText: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldLongText: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldInt: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldLongInt: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldFloat: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldCurrency: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldCheck: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldDate: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldDateTime: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldTime: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldDuration: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldPhone: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldSelect: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldJSON: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldLink: (type: ObjectFieldTypeValue) => boolean;
 export declare const MIN_DECIMAL_PLACE = 0;
 export declare const MAX_DECIMAL_PLACE = 100;
 export {};
