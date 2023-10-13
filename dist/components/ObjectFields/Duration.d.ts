@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 import { type InputProps } from '@mui/material';
 export type DurationProps = {
-    value: string;
+    value?: string;
     label?: ReactNode;
     helperText?: ReactNode;
     onChange: (value: string) => void;

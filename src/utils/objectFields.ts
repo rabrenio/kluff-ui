@@ -4,7 +4,7 @@ export const OBJECT_FIELD_TYPE = {
   Check: 'Check',
   Currency: 'Currency',
   Date: 'Date',
-  DateTime: 'Datetime',
+  DateTime: 'DateTime',
   Duration: 'Duration',
   Float: 'Float',
   Int: 'Int',

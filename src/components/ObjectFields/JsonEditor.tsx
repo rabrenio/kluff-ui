@@ -21,13 +21,22 @@ export type JsonEditorProps = {
 
 const JsonEditor = forwardRef<HTMLDivElement, JsonEditorProps>(
   (
-    { label, required, error, helperText, containerProps = {}, ...props },
+    {
+      label,
+      required,
+      error,
+      helperText,
+      value = '',
+      containerProps = {},
+      ...props
+    },
     ref
   ) => (
     <FormControl {...containerProps} error={error}>
       {label && <FormLabel required={required}>{label}</FormLabel>}
       <Editor
         {...props}
+        value={value}
         innerRef={ref}
         ace={ace}
         mode="code"

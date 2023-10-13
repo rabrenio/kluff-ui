@@ -4,7 +4,7 @@ export declare const OBJECT_FIELD_TYPE: {
     readonly Check: "Check";
     readonly Currency: "Currency";
     readonly Date: "Date";
-    readonly DateTime: "Datetime";
+    readonly DateTime: "DateTime";
     readonly Duration: "Duration";
     readonly Float: "Float";
     readonly Int: "Int";
