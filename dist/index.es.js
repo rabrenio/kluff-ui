@@ -5018,7 +5018,7 @@ function An(o) {
   );
 }
 const oh = It(
-  ({ error: o, required: l, label: F, helperText: f, value: v, onChange: h, ...a }, s) => {
+  ({ error: o, required: l, label: F, helperText: f, value: v = "", onChange: h, ...a }, s) => {
     const { anchorEl: e, setAnchorEl: t, handleClose: n } = Yr(), [i = "", r = "", c = ""] = pu(v);
     return /* @__PURE__ */ ke.jsx(
       Xo,
@@ -5120,7 +5120,7 @@ const $t = {
   Check: "Check",
   Currency: "Currency",
   Date: "Date",
-  DateTime: "Datetime",
+  DateTime: "DateTime",
   Duration: "Duration",
   Float: "Float",
   Int: "Int",
@@ -27638,13 +27638,22 @@ ace.define("ace/theme/github", ["require", "exports", "module", "ace/lib/dom"], 
   f.importCssString(l.cssText, l.cssClass);
 });
 const xh = It(
-  ({ label: o, required: l, error: F, helperText: f, containerProps: v = {}, ...h }, a) => /* @__PURE__ */ ke.jsxs(Si, { ...v, error: F, children: [
+  ({
+    label: o,
+    required: l,
+    error: F,
+    helperText: f,
+    value: v = "",
+    containerProps: h = {},
+    ...a
+  }, s) => /* @__PURE__ */ ke.jsxs(Si, { ...h, error: F, children: [
     o && /* @__PURE__ */ ke.jsx(Hr, { required: l, children: o }),
     /* @__PURE__ */ ke.jsx(
       on,
       {
-        ...h,
-        innerRef: a,
+        ...a,
+        value: v,
+        innerRef: s,
         ace: ku,
         mode: "code",
         theme: "ace/theme/github"

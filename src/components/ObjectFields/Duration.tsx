@@ -61,14 +61,17 @@ function DurationInput(props: Omit<NumberPickerProps, 'sx' | 'size'>) {
 }
 
 export type DurationProps = {
-  value: string
+  value?: string
   label?: ReactNode
   helperText?: ReactNode
   onChange: (value: string) => void
 } & Omit<InputProps, 'value' | 'onChange'>
 
 const Duration = forwardRef<unknown, DurationProps>(
-  ({ error, required, label, helperText, value, onChange, ...props }, ref) => {
+  (
+    { error, required, label, helperText, value = '', onChange, ...props },
+    ref
+  ) => {
     const { anchorEl, setAnchorEl, handleClose } =
       useMenuState<HTMLDivElement>()
     const [hours = '', minutes = '', seconds = ''] = extractValue(value)
