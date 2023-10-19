@@ -4,7 +4,7 @@ export const OBJECT_FIELD_TYPE = {
   Check: 'Check',
   Currency: 'Currency',
   Date: 'Date',
-  DateTime: 'DateTime',
+  DateTime: 'Datetime',
   Duration: 'Duration',
   Float: 'Float',
   Int: 'Int',
@@ -12,6 +12,7 @@ export const OBJECT_FIELD_TYPE = {
   Link: 'Link',
   LongInt: 'Long Int',
   LongText: 'Long Text',
+  Percent: 'Percent',
   Phone: 'Phone',
   Select: 'Select',
   Text: 'Text',
@@ -42,6 +43,8 @@ export const isFieldDuration = (type: ObjectFieldTypeValue) =>
   type === OBJECT_FIELD_TYPE.Duration
 export const isFieldPhone = (type: ObjectFieldTypeValue) =>
   type === OBJECT_FIELD_TYPE.Phone
+export const isFieldPercent = (type: ObjectFieldTypeValue) =>
+  type === OBJECT_FIELD_TYPE.Percent
 export const isFieldSelect = (type: ObjectFieldTypeValue) =>
   type === OBJECT_FIELD_TYPE.Select
 export const isFieldJSON = (type: ObjectFieldTypeValue) =>

@@ -1,4 +1,4 @@
-import { type ReactNode, useState, memo } from 'react'
+import { type ReactNode, memo } from 'react'
 import { LoadingButton } from '@mui/lab'
 import {
   Button,
@@ -11,6 +11,7 @@ import {
 } from '@mui/material'
 
 export type AlertDialogProps = {
+  loading?: boolean
   /**
    * message of the dialog
    * */
@@ -26,6 +27,7 @@ export type AlertDialogProps = {
 } & DialogProps
 
 function AlertDialog({
+  loading,
   open,
   body,
   title = 'Confirm',
@@ -34,7 +36,6 @@ function AlertDialog({
   onClose,
   onConfirm,
 }: AlertDialogProps) {
-  const [isLoading, setLoading] = useState(false)
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>{title}</DialogTitle>
@@ -45,7 +46,7 @@ function AlertDialog({
         <Button
           variant="text"
           color="inherit"
-          disabled={isLoading}
+          disabled={loading}
           onClick={onClose}
         >
           {cancelText}
@@ -53,15 +54,10 @@ function AlertDialog({
         <LoadingButton
           variant="text"
           color="inherit"
-          loading={isLoading}
+          loading={loading}
           onClick={async () => {
-            try {
-              setLoading(true)
-              await onConfirm()
-              onClose()
-            } finally {
-              setLoading(false)
-            }
+            await onConfirm()
+            onClose()
           }}
         >
           {confirmText}
