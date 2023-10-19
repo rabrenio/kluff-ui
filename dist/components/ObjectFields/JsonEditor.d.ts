@@ -6,6 +6,8 @@ export type JsonEditorProps = {
     label?: string;
     required?: boolean;
     error?: boolean;
+    disabled?: boolean;
+    readOnly?: boolean;
     helperText?: ReactNode;
     containerProps: Omit<FormControlProps, 'error'>;
 } & Omit<ComponentProps<typeof Editor>, 'innerRef' | 'mode'>;
@@ -13,6 +15,8 @@ declare const JsonEditor: import("react").ForwardRefExoticComponent<{
     label?: string | undefined;
     required?: boolean | undefined;
     error?: boolean | undefined;
+    disabled?: boolean | undefined;
+    readOnly?: boolean | undefined;
     helperText?: ReactNode;
     containerProps: Omit<FormControlProps, 'error'>;
 } & Omit<import("jsoneditor-react").JsonEditorProps, "mode" | "innerRef"> & import("react").RefAttributes<HTMLDivElement>>;

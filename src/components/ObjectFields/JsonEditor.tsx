@@ -15,6 +15,8 @@ export type JsonEditorProps = {
   label?: string
   required?: boolean
   error?: boolean
+  disabled?: boolean
+  readOnly?: boolean
   helperText?: ReactNode
   containerProps: Omit<FormControlProps, 'error'>
 } & Omit<ComponentProps<typeof Editor>, 'innerRef' | 'mode'>
@@ -27,6 +29,8 @@ const JsonEditor = forwardRef<HTMLDivElement, JsonEditorProps>(
       error,
       helperText,
       value = '',
+      disabled,
+      readOnly,
       containerProps = {},
       ...props
     },
@@ -39,7 +43,7 @@ const JsonEditor = forwardRef<HTMLDivElement, JsonEditorProps>(
         value={value}
         innerRef={ref}
         ace={ace}
-        mode="code"
+        mode={disabled || readOnly ? 'view' : 'code'}
         theme="ace/theme/github"
       />
       {helperText && <FormHelperText>{helperText}</FormHelperText>}
