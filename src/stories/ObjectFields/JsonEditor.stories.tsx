@@ -5,7 +5,7 @@ import JsonEditor, {
 } from '../../components/ObjectFields/JsonEditor'
 
 function JsonEditorContainer(props: JsonEditorProps) {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState({ test: 'test' })
   return (
     <JsonEditor
       {...props}
@@ -30,6 +30,7 @@ export const Primary: Story = {
     label: 'Enter a json',
     required: true,
     error: false,
+    disabled: false,
     helperText: 'Come one type something!',
     containerProps: {
       className: 'w-full',
