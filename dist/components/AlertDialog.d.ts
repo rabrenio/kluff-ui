@@ -1,6 +1,7 @@
 import { type ReactNode } from 'react';
 import { type DialogProps } from '@mui/material';
 export type AlertDialogProps = {
+    loading?: boolean;
     /**
      * message of the dialog
      * */
@@ -10,6 +11,6 @@ export type AlertDialogProps = {
     onConfirm: () => void;
     onClose: () => void;
 } & DialogProps;
-declare function AlertDialog({ open, body, title, cancelText, confirmText, onClose, onConfirm, }: AlertDialogProps): import("react/jsx-runtime").JSX.Element;
+declare function AlertDialog({ loading, open, body, title, cancelText, confirmText, onClose, onConfirm, }: AlertDialogProps): import("react/jsx-runtime").JSX.Element;
 declare const _default: import("react").MemoExoticComponent<typeof AlertDialog>;
 export default _default;

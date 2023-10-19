@@ -61,6 +61,7 @@ export default function IconButtonWithConfirm({
       <AlertDialog
         {...alertDialogProps}
         open={toggle.isOpen}
+        loading={loading}
         onClose={toggle.toggle}
         onConfirm={onConfirm}
       />

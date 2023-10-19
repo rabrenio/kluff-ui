@@ -4,7 +4,7 @@ export declare const OBJECT_FIELD_TYPE: {
     readonly Check: "Check";
     readonly Currency: "Currency";
     readonly Date: "Date";
-    readonly DateTime: "DateTime";
+    readonly DateTime: "Datetime";
     readonly Duration: "Duration";
     readonly Float: "Float";
     readonly Int: "Int";
@@ -12,6 +12,7 @@ export declare const OBJECT_FIELD_TYPE: {
     readonly Link: "Link";
     readonly LongInt: "Long Int";
     readonly LongText: "Long Text";
+    readonly Percent: "Percent";
     readonly Phone: "Phone";
     readonly Select: "Select";
     readonly Text: "Text";
@@ -29,6 +30,7 @@ export declare const isFieldDateTime: (type: ObjectFieldTypeValue) => boolean;
 export declare const isFieldTime: (type: ObjectFieldTypeValue) => boolean;
 export declare const isFieldDuration: (type: ObjectFieldTypeValue) => boolean;
 export declare const isFieldPhone: (type: ObjectFieldTypeValue) => boolean;
+export declare const isFieldPercent: (type: ObjectFieldTypeValue) => boolean;
 export declare const isFieldSelect: (type: ObjectFieldTypeValue) => boolean;
 export declare const isFieldJSON: (type: ObjectFieldTypeValue) => boolean;
 export declare const isFieldLink: (type: ObjectFieldTypeValue) => boolean;
