@@ -23,7 +23,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
     { error, helperText, required, className, value, onChange, ...props },
     ref
   ) => {
-    const date = value ? new Date(value) : new Date()
+    const date = value ? new Date(value) : null
     return (
       <DesktopDatePicker
         {...props}

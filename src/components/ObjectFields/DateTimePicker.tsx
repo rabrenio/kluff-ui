@@ -23,7 +23,7 @@ const DateTimePicker = forwardRef<HTMLDivElement, DateTimePickerProps>(
     { error, helperText, required, className, value, onChange, ...props },
     ref
   ) => {
-    const dateTime = value ? new Date(value) : new Date()
+    const dateTime = value ? new Date(value) : null
     return (
       <ReactDateTimePicker
         {...props}

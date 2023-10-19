@@ -27,7 +27,7 @@ const TimePicker = forwardRef<HTMLDivElement, TimePickerProps>(
     { error, helperText, required, className, value, onChange, ...props },
     ref
   ) => {
-    const time = value ? convertTimeToDate(value) : new Date()
+    const time = value ? convertTimeToDate(value) : null
     return (
       <ReactTimePicker
         {...props}

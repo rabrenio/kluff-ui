@@ -4906,7 +4906,7 @@ function vu(r) {
 }
 const wh = It(
   ({ error: r, helperText: l, required: F, className: f, value: v, onChange: h, ...a }, s) => {
-    const e = v ? new Date(v) : /* @__PURE__ */ new Date();
+    const e = v ? new Date(v) : null;
     return /* @__PURE__ */ De.jsx(
       ps,
       {
@@ -4931,7 +4931,7 @@ const wh = It(
   }
 ), Eh = It(
   ({ error: r, helperText: l, required: F, className: f, value: v, onChange: h, ...a }, s) => {
-    const e = v ? new Date(v) : /* @__PURE__ */ new Date();
+    const e = v ? new Date(v) : null;
     return /* @__PURE__ */ De.jsx(
       ms,
       {
@@ -4956,7 +4956,7 @@ const wh = It(
   }
 ), Ah = It(
   ({ error: r, helperText: l, required: F, className: f, value: v, onChange: h, ...a }, s) => {
-    const e = v ? pu(v) : /* @__PURE__ */ new Date();
+    const e = v ? pu(v) : null;
     return /* @__PURE__ */ De.jsx(
       gs,
       {
