@@ -27642,18 +27642,20 @@ const Sh = It(
     error: F,
     helperText: f,
     value: v = "",
-    containerProps: h = {},
-    ...a
-  }, s) => /* @__PURE__ */ ke.jsxs(Si, { ...h, error: F, children: [
+    disabled: h,
+    readOnly: a,
+    containerProps: s = {},
+    ...e
+  }, t) => /* @__PURE__ */ ke.jsxs(Si, { ...s, error: F, children: [
     o && /* @__PURE__ */ ke.jsx(Hr, { required: l, children: o }),
     /* @__PURE__ */ ke.jsx(
       rn,
       {
-        ...a,
+        ...e,
         value: v,
-        innerRef: s,
+        innerRef: t,
         ace: ku,
-        mode: "code",
+        mode: h || a ? "view" : "code",
         theme: "ace/theme/github"
       }
     ),
