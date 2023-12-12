@@ -913,6 +913,9 @@ const defaultThemeOptions: ThemeOptions = {
       },
     },
     MuiPaper: {
+      defaultProps: {
+        variant: 'outlined',
+      },
       styleOverrides: {
         root: {
           backgroundImage: 'none',
@@ -1045,7 +1048,7 @@ function extendThemeWithMixins(options: ThemeOptions) {
 }
 
 export default function generateMuiTheme(
-  mode = 'dark',
+  mode = 'light5',
   direction: ThemeOptions['direction'] = 'ltr'
 ) {
   const data = merge(
