@@ -29117,6 +29117,9 @@ const Pr = /* @__PURE__ */ _i(Qu), ri = {
       }
     },
     MuiPaper: {
+      defaultProps: {
+        variant: "outlined"
+      },
       styleOverrides: {
         root: {
           backgroundImage: "none"
@@ -29244,7 +29247,7 @@ function th(r) {
     })
   };
 }
-function Kh(r = "dark", l = "ltr") {
+function Kh(r = "light5", l = "ltr") {
   const F = Pr(
     {},
     Zu,
