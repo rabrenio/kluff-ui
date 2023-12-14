@@ -961,7 +961,7 @@ function mh({
       "div",
       {
         role: "button",
-        className: "w-[30px] h-[30px] rounded-sm border-3 border-white",
+        className: "w-[30px] h-[30px] rounded-sm border-3 border-grey-400",
         style: {
           backgroundColor: l
         },
@@ -3586,7 +3586,7 @@ function yh({
   );
 }
 function bh({ children: r, ...l }) {
-  return /* @__PURE__ */ De.jsx("div", { ...l, role: "tabpanel", children: /* @__PURE__ */ De.jsx(Zo, { className: "h-full p-24", children: r }) });
+  return /* @__PURE__ */ De.jsx("div", { ...l, role: "tabpanel", children: /* @__PURE__ */ De.jsx(Zo, { className: "h-full p-16", children: r }) });
 }
 const Ch = It(
   ({ label: r, value: l, error: F, helperText: f, required: v, ...h }, a) => /* @__PURE__ */ De.jsxs(Ti, { error: F, required: v, children: [
