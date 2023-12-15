@@ -27,7 +27,7 @@ export default function ColorPicker({
       {label && <InputLabel>{label}</InputLabel>}
       <div
         role="button"
-        className="w-[30px] h-[30px] rounded-sm border-3 border-white"
+        className="w-[30px] h-[30px] rounded-sm border-3 border-grey-400"
         style={{
           backgroundColor: value,
         }}
