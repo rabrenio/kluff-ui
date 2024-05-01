@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
-import { Button as MuiButton, type ButtonProps as ButtonPropss } from '@mui/material'
+import { ButtonGroup as MuiButtonGroup, type ButtonGroupProps as  ButtonGroupPropss} from '@mui/material'
 
-export type ButtonProps = ButtonPropss
-export default function Button({ children, ...props }: ButtonProps) {
+export type ButtonGroupProps = ButtonGroupPropss
+export default function ButtonGroup({ children, ...props }: ButtonGroupProps) {
   return (
-    <MuiButton {...props} color="inherit" LinkComponent={Link}>
+    <MuiButtonGroup {...props}>
       {children}
-    </MuiButton>
+    </MuiButtonGroup>
   )
 }

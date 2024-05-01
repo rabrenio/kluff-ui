@@ -79,7 +79,6 @@ const Duration = forwardRef<unknown, DurationProps>(
     return (
       <ClickAwayListener
         onClickAway={() => {
-          console.log('click away')
           setAnchorEl(null)
         }}
       >

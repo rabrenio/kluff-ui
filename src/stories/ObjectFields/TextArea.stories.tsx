@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import type { StoryObj, Meta } from '@storybook/react'
-import LongText, {
-  type LongTextProps,
-} from '../../components/ObjectFields/LongText'
+import TextArea, {
+  type TextAreaProps,
+} from '../../components/ObjectFields/TextArea'
 
-function LongTextContainer(props: LongTextProps) {
+function TextAreaContainer(props: TextAreaProps) {
   const [value, setValue] = useState('')
   return (
-    <LongText
+    <TextArea
       {...props}
       value={value}
       onChange={e => setValue(e.target.value)}
@@ -15,10 +15,10 @@ function LongTextContainer(props: LongTextProps) {
   )
 }
 
-const meta: Meta<LongTextProps> = {
-  title: 'ObjectFields/LongText',
+const meta: Meta<TextAreaProps> = {
+  title: 'ObjectFields/TextArea',
   tags: ['autodocs'],
-  component: (props: LongTextProps) => <LongTextContainer {...props} />,
+  component: (props: TextAreaProps) => <TextAreaContainer {...props} />,
 }
 
 export default meta

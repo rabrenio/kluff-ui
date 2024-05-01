@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
-import { ArrowBack } from '@mui/icons-material'
-import { IconButton, type IconButtonProps } from '@mui/material'
+import { Button as MuiButton, type ButtonProps as ButtonPropss } from '@mui/material'
 
-export type BackButtonProps = IconButtonProps
-export default function BackButton(props: BackButtonProps) {
+export type ButtonProps = ButtonPropss
+export default function Button({ children, ...props }: ButtonProps) {
   return (
-    <IconButton {...props} color="inherit" LinkComponent={Link}>
-      <ArrowBack />
-    </IconButton>
+    <MuiButton {...props} LinkComponent={Link}>
+      {children}
+    </MuiButton>
   )
 }
